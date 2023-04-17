@@ -10,13 +10,11 @@ export function useFetch(endpoint, query) {
     method: 'GET',
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
     headers: {
-      'X-RapidAPI-Key': '989ae835c8mshfe5524d4ded449fp13c482jsn29c80f2d7829',
+      'X-RapidAPI-Key': 'd07f7146e6msh05360591c1ff768p18acd4jsn00f00dc418c3',
       'X-RapidAPI-Host': 'jsearch.p.rapidapi.com'
     },
     params: { ...query },
   };
-
-  console.log(data);
 
   async function fetchData() {
     setIsLoading(true);

@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { View, Text, SafeAreaView, ScrollView, ActivityIndicator, RefreshControl } from 'react-native';
 import { Company, JobAbout, JobFooter, JobTabs, ScreenHeaderBtn, Specifics } from '../../components';
 import { Stack, useRouter, useSearchParams } from 'expo-router';
-import { COLORS, icons, SIZES, Tabs } from '../../constants';
+import { COLORS, icons, SIZES, Tabs, DefaultApplyLink } from '../../constants';
 import { useFetch } from '../../hooks/userFetch';
 
 function JobDetails() {
@@ -107,6 +107,8 @@ function JobDetails() {
                 </View>
           }
         </ScrollView>
+
+        <JobFooter url={data[0]?.job_google_link ?? DefaultApplyLink} />
       </>
 
     </SafeAreaView>
